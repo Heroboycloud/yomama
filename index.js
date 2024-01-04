@@ -31,7 +31,7 @@ let le= j.length;
 return j[(Math.floor(Math.random() * le))]
 }
 
-app.listen(process.env.PORT || 3000,running);
+app.listen(process.env.PORT || 3000);
 function running(){
 console.log(' Joke Server running on 8080...')
 }
