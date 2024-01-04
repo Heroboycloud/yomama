@@ -17,7 +17,7 @@ bb=JSON.parse(bb)
 //console.log(bb);
 const arr= ["bald","like","nasty","old","short","stupid","ugly","fat","hairy","odor","poor","skinny","tall"];
 
-app.listen(8080,running);
+//app.listen(8080,running);
 
 function Randomize(j){
 let le= j.length;
@@ -53,3 +53,5 @@ let joke=Randomize(bb[`${tag}`])
 res.send(joke);
 
 })
+
+module.exports= app
