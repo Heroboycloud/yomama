@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 Required modules include Express and fs..
 
@@ -7,14 +6,10 @@ Build steps include `npm i express`
 
 
 */
-const express= require('express');
-var fs= require('fs');
-=======
 // This is yo mama api
 // by Akindele
 var express= require('express');
 var fs= require('node:fs');
->>>>>>> testing
 var app= express()
 var bb= fs.readFileSync('./jokes.json')
 bb = bb.toString()
