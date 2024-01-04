@@ -8,9 +8,16 @@ Build steps include `npm i express`
 */
 // This is yo mama api
 // by Akindele
+const path = require('path');
+
 var express= require('express');
 var fs= require('node:fs');
-var app= express()
+var app= express();
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+})
 var bb= fs.readFileSync('./jokes.json')
 bb = bb.toString()
 bb=JSON.parse(bb)
@@ -24,11 +31,11 @@ let le= j.length;
 return j[(Math.floor(Math.random() * le))]
 }
 
-
+app.listen(process.env.PORT || 3000,running);
 function running(){
 console.log(' Joke Server running on 8080...')
 }
-app.get('/',(req,res)=>{
+app.get('/tags',(req,res)=>{
 res.json({
 title: "Joke Fetcher",
 tags: arr
@@ -55,6 +62,3 @@ res.send(joke);
 })
 
 module.exports= app
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});

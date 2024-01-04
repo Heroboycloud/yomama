@@ -1,21 +1,22 @@
 {
   "name": "yo-mama",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A collection of yo mama jokes in JSON format.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heroboyCloud/yo-mama.git"
+    "url": "git+https://github.com/heroboyCloud/yomama.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akindel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/heroboyCloud/yo-mama/issues"
+    "url": "https://github.com/heroboyCloud/yomama/issues"
   },
   "homepage": "https://github.com/heroboyCloud/yo-mama#readme",
   "dependencies": {
