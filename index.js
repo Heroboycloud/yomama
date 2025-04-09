@@ -31,7 +31,6 @@ let le= j.length;
 return j[(Math.floor(Math.random() * le))]
 }
 
-app.listen(process.env.PORT || 3000);
 function running(){
 console.log(' Joke Server running on 8080...')
 }
@@ -60,5 +59,17 @@ let joke=Randomize(bb[`${tag}`])
 res.send(joke);
 
 })
+
+
+app.get('*',(req,res)=>{
+
+res.send("Oops!! Wrong url specified!! Try /tags or /tag/bald");
+
+});
+
+
+app.listen(process.env.PORT || 3000,running);
+
+
 
 module.exports= app
