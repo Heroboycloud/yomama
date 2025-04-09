@@ -16,7 +16,8 @@ var app= express();
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html', {root: path.join(__dirname, 'public')});
+
+  res.send("Hi, welcome to Joke Server");
 })
 var bb= fs.readFileSync('./jokes.json')
 bb = bb.toString()
