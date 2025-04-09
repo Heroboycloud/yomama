@@ -33,7 +33,7 @@ return j[(Math.floor(Math.random() * le))]
 }
 
 function running(){
-console.log(' Joke Server running on 8080...')
+console.log(' Joke Server running..')
 }
 app.get('/tags',(req,res)=>{
 res.json({
@@ -69,7 +69,7 @@ res.send("Oops!! Wrong url specified!! Try /tags or /tag/bald");
 });
 
 
-app.listen(process.env.PORT || 3000,running);
+//app.listen(process.env.PORT || 3000,running);
 
 
 
